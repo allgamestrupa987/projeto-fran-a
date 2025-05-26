@@ -70,4 +70,160 @@ th {
 <td> <img src="cbum.jpg"  width="400" height="300" </td>
   <td> <img src="arnold.jpg"  width="400" height="300" </td>
      </body>
+
+     <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro - Academia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        textarea {
+            height: 100px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .submit-btn {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Cadastro de Academia</h1>
+    <form action="processar_cadastro.php" method="POST">
+        <!-- Dados Pessoais -->
+        <div class="form-group">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" name="telefone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" required>
+        </div>
+
+        <div class="form-group">
+            <label for="data_nascimento">Data de Nascimento:</label>
+            <input type="date" id="data_nascimento" name="data_nascimento" required>
+        </div>
+
+        <!-- Endereço -->
+        <div class="form-group">
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required>
+        </div>
+
+        <div class="form-group">
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" name="bairro" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" required>
+        </div>
+
+        <div class="form-group">
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado" required>
+                <option value="">Selecione</option>
+                <option value="SP">São Paulo (SP)</option>
+                <option value="RJ">Rio de Janeiro (RJ)</option>
+                <option value="MG">Minas Gerais (MG)</option>
+                <option value="BA">Bahia (BA)</option>
+                <!-- Adicionar mais estados conforme necessário -->
+            </select>
+        </div>
+
+        <!-- Objetivo do Treino -->
+        <div class="form-group">
+            <label for="objetivo">Objetivo do Treinamento:</label>
+            <select id="objetivo" name="objetivo" required>
+                <option value="perda_de_peso">Perda de Peso</option>
+                <option value="ganho_muscular">Ganho Muscular</option>
+                <option value="condicionamento">Condicionamento Físico</option>
+                <option value="saude_geral">Saúde Geral</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="preferencia">Tipo de Treino Preferido:</label>
+            <select id="preferencia" name="preferencia" required>
+                <option value="musculacao">Musculação</option>
+                <option value="aerobico">Aeróbico</option>
+                <option value="pilates">Pilates</option>
+                <option value="funcional">Funcional</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="observacoes">Observações:</label>
+            <textarea id="observacoes" name="observacoes"></textarea>
+        </div>
+
+        <!-- Submeter Formulário -->
+        <button type="submit" class="submit-btn">Cadastrar</button>
+    </form>
+</div>
+
+</body>
 </html>
